@@ -15,7 +15,7 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-//@Bean
+@Bean
 	CommandLineRunner commandLineRunner(PatientRepository patientRepository){
 		return args->{
 			patientRepository.save(new Patient(null,"Aymane Eloumami",new Date(),true,15));
